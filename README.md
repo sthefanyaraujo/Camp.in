@@ -16,7 +16,7 @@ Este é um projeto que desenvolvi durante o curso Discover da Rocketseat.
 
 ### Link para o projeto online
 
-- [Camp.in](https://sthefanyaraujo.github.io/rocketseat_camp-in/)
+- [Camp.in](https://sthefanyaraujo.github.io/desafio_rocketseat_camp-in/)
 
 ### Link para o desafio
 
