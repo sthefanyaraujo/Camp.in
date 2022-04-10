@@ -1,0 +1,311 @@
+/*===== RESET =============================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*===== VARIABLES =============================*/
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+
+  /* fonts */
+  --title-font:'Poppins', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--background);
+  color: var(--text-base);
+  font: 400 1rem var(--body-font);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.content {
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
+  width: 50%;
+  height: 100vh;
+}
+
+header {
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+main {
+  max-width: 572px;
+  background: var(--form-background);
+  border-radius: .25rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 3.4rem 7.4rem;
+  margin: auto;  
+}
+
+
+.title {
+  display: flex;
+  justify-content: left;
+  align-items: center; 
+  margin-bottom: 0.3125rem;
+}
+
+.title h1 {
+  font: 600 1.5rem var(--title-font);
+  color: var(--title-font);
+  line-height: 2.25rem;
+}
+
+.title img {
+  padding-right: 0.625rem;
+}
+
+.subtitle {
+  font: 500 1rem var(--body-font);
+  line-height: 1.5rem;
+  margin-bottom: 1.6875rem;
+}
+
+.input-box {
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.input-box label {
+  font: 500 1rem var(--title-font);
+}
+
+.input-box input {
+  width: 100%;
+  height: 2.75rem;
+
+  padding-left: 2.5rem;
+  margin-top: 0.3125rem;
+
+  border: 1px solid var(--text-base);
+  border-radius: 0.25rem;
+
+  color: var(--text-base);
+  background: transparent;
+  outline: none;
+}
+
+.input-box input::placeholder{
+  color: var(--text-base);
+}
+
+.input-box input:focus {
+  border: 1px solid var(--primary-color);
+  box-shadow: 0px 0px 0px 2px #FFDE88;
+}
+
+.input-box img {
+  position: absolute;
+  top: 75%;
+  left: 0.75rem;
+  transform: translateY(-75%);
+  transition: .4s;
+}
+
+.input-box img#eye {
+  left: 90%;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 1.3125rem;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Esconder o checkbox padrão */
+.container input {
+  display: none;
+}
+
+/* Criar o checkbox customizado */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  border: 1px solid var(--text-base);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+/* Quando o checkbox é clicado, adicionar um fundo rosa */
+.container input:checked ~ .checkmark {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+/* Criar o ícone de check, escondido quando não estiver selecionado */
+.container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: .35rem;
+  top: .09rem;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Exibir o ícone quando selecionado */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.remember {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember label {
+  font: 400 1rem var(--body-font);
+}
+
+.remember a{
+  font: 600 0.875rem var(--title-font);
+  color: var(--primary-color);
+}
+
+button {
+  width: 100%;
+  padding: 1.5rem 0;
+  margin-bottom: 0.875rem;
+
+  text-transform: uppercase;
+  font: 600 1.125rem var(--title-font);
+  line-height: 0;
+
+  background: var(--primary-color);
+  border: none;
+  border-radius: .25rem;
+}
+
+.login-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--primary-color);
+  font: 600 .875rem var(--title-font);
+}
+
+.login-in span {
+  font: 400 .875rem var(--title-font);
+  margin-right: .2rem;
+}
+
+.form-image {
+  width: 50%;  
+}
+
+.form-image img { 
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; 
+}
+
+/*======== MEDIA QUERIES ==========*/
+/* extra large devices: 1200 > */
+@media screen and (max-width: 1200px) {
+  .content {
+    width: 100%;  
+  } 
+
+  header {
+    margin-left: 5rem;
+  }
+  
+  main {
+    margin-top: 3.5rem;
+  }
+
+  .form-image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  header {
+    margin-left: 4rem;
+  }
+
+  main {
+    margin-top: 1.875rem;
+    padding: 2rem;
+  }
+
+  form {
+    padding: 1rem 4rem;
+  }  
+}
+  /* large devices: 1023 > */
+  /* large devices: 992 > */
+@media screen and (max-width: 590px) {
+  .content {
+    width: 100vw;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  header {
+    margin-top: 2.5rem;
+    margin-left: 0;
+    margin-bottom: 1.875rem;
+  }
+
+  main {
+    max-width: 100%;
+    padding: 0;
+    background: transparent;  
+  }
+
+  form {
+    width: 100%;
+    padding: 0;
+  }
+  .input-box img#eye {
+    left: 92%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  form {
+    
+  }
+  
+}

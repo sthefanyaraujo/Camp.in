@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camp.in</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--SCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <img src="./assets/logo.svg" alt="logotipo do site camp.in" />
+      </header>
+
+      <main>
+        <form action="#">
+          <div class="title">
+            <img src="./assets/log-in.svg" alt="imagem de log-in" />
+            <h1>Faça seu login</h1>
+          </div>
+          <p class="subtitle">Entre com suas informações de cadastro.</p>
+
+          <div class="input-box">
+            <label>E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Digite seu e-mail"
+              required
+            />
+            <img src="./assets/mail.svg" alt="imagem de caixa de e-mail" />
+          </div>
+
+          <div class="input-box input">
+            <label>Senha</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Digite sua senha"
+              required
+            />
+            <img src="./assets/lock.svg" alt="imagem cadeado de senha" />
+            <img
+              id="eye"
+              src="./assets/eye.svg"
+              alt="icone para ocultar ou mostrar senha"/>
+          </div>
+
+          <div class="remember">
+            <label class="container">Lembre-me
+              <input type="checkbox" checked="checked"/>
+              <span class="checkmark"></span>
+            </label>
+
+            <a href="#">Esqueci minha senha</a>
+          </div>
+
+          <button onclick="cadastrar()">Entrar</button>
+
+          <a class="login-in" href="#">
+            <span>Não tem conta? </span> 
+            Registre-se
+          </a>
+        </form>
+        <!--form-->
+      </main>
+    </div>
+    <div class="form-image">
+      <img
+        src="./assets/side-image.png"
+        alt="Caminhonete com cabana de acampamento"
+      />
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
